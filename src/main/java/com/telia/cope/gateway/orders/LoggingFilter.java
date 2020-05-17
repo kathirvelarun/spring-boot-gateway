@@ -27,7 +27,7 @@ public class LoggingFilter implements GlobalFilter {
         String originalUri = (uris.isEmpty()) ? "Unknown" : uris.iterator().next().toString();
         Route route = exchange.getAttribute(GATEWAY_ROUTE_ATTR);
         URI routeUri = exchange.getAttribute(GATEWAY_REQUEST_URL_ATTR);
-        System.out.println("Incoming request " + originalUri + " is routed to id: " + route.getId()
+        System.out.println("Incoming request >> Git Check" + originalUri + " is routed to id: " + route.getId()
                 + ", uri:" + routeUri);
         return chain.filter(exchange);
     }
